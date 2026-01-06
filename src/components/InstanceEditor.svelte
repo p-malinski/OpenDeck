@@ -3,7 +3,7 @@
 
 	import { getImage, resizeImage } from "$lib/rendererHelper";
 
-	import { invoke } from "@tauri-apps/api/core";
+    import { invoke } from "$lib/shims";
 
 	export let instance: ActionInstance;
 	export let showEditor: boolean;

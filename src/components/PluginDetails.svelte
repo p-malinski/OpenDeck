@@ -5,7 +5,7 @@
 
 	import "$lib/shims.ts";
 
-	import { invoke } from "@tauri-apps/api/core";
+    import { invoke } from "$lib/shims";
 	import DOMPurify from "dompurify";
 	import { marked } from "marked";
 	import { baseUrl } from "marked-base-url";

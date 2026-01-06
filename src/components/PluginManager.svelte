@@ -16,9 +16,7 @@
 	import { localisations, settings } from "$lib/settings";
 	import { actionList, deviceSelector, PRODUCT_NAME } from "$lib/singletons";
 
-	import { invoke } from "@tauri-apps/api/core";
-	import { onOpenUrl } from "@tauri-apps/plugin-deep-link";
-	import { ask, message, open } from "@tauri-apps/plugin-dialog";
+    import { ask, invoke, message, onOpenUrl, open } from "$lib/shims";
 
 	// @ts-expect-error
 	const fetch = window.fetchNative ?? window.fetch;

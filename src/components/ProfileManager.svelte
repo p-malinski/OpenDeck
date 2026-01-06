@@ -8,9 +8,7 @@
 	import Trash from "phosphor-svelte/lib/Trash";
 	import Popup from "./Popup.svelte";
 
-	import { invoke } from "@tauri-apps/api/core";
-	import { listen } from "@tauri-apps/api/event";
-	import { message } from "@tauri-apps/plugin-dialog";
+    import { invoke, listen, message } from "$lib/shims";
 
 	let folders: { [name: string]: string[] } = {};
 	let value: string;

@@ -7,8 +7,7 @@
 	import Key from "./Key.svelte";
 
 	import { inspectedInstance, inspectedParentAction } from "$lib/propertyInspector";
-
-	import { invoke } from "@tauri-apps/api/core";
+    import { invoke } from "$lib/shims";
 
 	export let device: DeviceInfo;
 	export let profile: Profile;

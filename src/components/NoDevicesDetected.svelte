@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { PRODUCT_NAME } from "$lib/singletons";
 
-	import { invoke } from "@tauri-apps/api/core";
+    import { invoke } from "$lib/shims";
 
 	let buildInfo: string;
 	(async () => buildInfo = await invoke("get_build_info"))();

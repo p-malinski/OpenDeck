@@ -12,7 +12,7 @@ export type Settings = {
 	disableelgato: boolean;
 };
 
-import { invoke } from "@tauri-apps/api/core";
+import { invoke } from "$lib/shims";
 import { type Writable, writable } from "svelte/store";
 
 export const settings: Writable<Settings | null> = writable(null);

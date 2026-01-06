@@ -7,8 +7,7 @@
 	import { settings } from "$lib/settings";
 	import { PRODUCT_NAME } from "$lib/singletons";
 
-	import { invoke } from "@tauri-apps/api/core";
-	import { listen } from "@tauri-apps/api/event";
+    import { invoke, listen } from "$lib/shims";
 
 	let showPopup: boolean;
 	let buildInfo: string;

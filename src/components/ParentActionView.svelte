@@ -7,7 +7,7 @@
 
 	import { inspectedInstance, inspectedParentAction } from "$lib/propertyInspector";
 
-	import { invoke } from "@tauri-apps/api/core";
+    import { invoke } from "$lib/shims";
 
 	export let profile: Profile;
 

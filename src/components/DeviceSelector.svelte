@@ -3,10 +3,8 @@
 	import type { Profile } from "$lib/Profile";
 
 	import { profileManager } from "$lib/singletons";
-
-	import { invoke } from "@tauri-apps/api/core";
-	import { listen } from "@tauri-apps/api/event";
-	import { getCurrentWindow, LogicalSize } from "@tauri-apps/api/window";
+    import { getCurrentWindow, invoke, listen } from "$lib/shims";
+	import { LogicalSize } from "@tauri-apps/api/window";
 
 	export let devices: { [id: string]: DeviceInfo } = {};
 	export let value: string;
