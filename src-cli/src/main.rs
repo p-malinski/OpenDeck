@@ -1,0 +1,16 @@
+use tracing_subscriber;
+
+mod handlers;
+mod router;
+
+#[tokio::main]
+async fn main() {
+	let server_address = "127.0.0.1:57114";
+
+	// initialize tracing
+	tracing_subscriber::fmt::init();
+
+	let app_router = router::build_router();
+	let tcp_listener = tokio::net::TcpListener::bind(server_address).await.unwrap();
+	axum::serve(tcp_listener, app_router).await.unwrap();
+}

@@ -26,6 +26,19 @@
 				]
 			},
 			"preLaunchTask": "frontend:build"
-		}
+		},
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug CLI (debug)",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--manifest-path=./src-cli/Cargo.toml",
+                    "--no-default-features"
+                ]
+            },
+            "preLaunchTask": "frontend:dev"
+        }
 	]
 }
