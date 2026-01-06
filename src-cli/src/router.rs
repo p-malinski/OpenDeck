@@ -1,7 +1,8 @@
-use axum::{Router, routing::post};
+use axum::{Router, routing::{post, get}};
 
 pub fn build_router() -> Router {
 	Router::new()
+		.route("/events", get(crate::handlers::events))
 		.route("/get_categories", post(crate::handlers::get_categories))
 		.route("/list_plugins", post(crate::handlers::list_plugins))
 		.route("/get_selected_profile", post(crate::handlers::get_selected_profile))

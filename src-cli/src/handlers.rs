@@ -2,6 +2,10 @@
 // Expand signatures and return types as needed later.
 
 use reqwest::StatusCode;
+use axum::response::sse::Sse;
+use std::convert::Infallible;
+use futures::Stream;
+use crate::sse as sse_mod;
 
 pub(crate) async fn get_categories() -> StatusCode {
 	StatusCode::OK
@@ -121,4 +125,8 @@ pub(crate) async fn set_settings() -> StatusCode {
 
 pub(crate) async fn get_localisations() -> StatusCode {
 	StatusCode::OK
+}
+
+pub(crate) async fn events() -> Sse<impl Stream<Item = Result<axum::response::sse::Event, Infallible>>> {
+	sse_mod::sse_stream()
 }

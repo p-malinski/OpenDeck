@@ -2,6 +2,7 @@ use tracing_subscriber;
 
 mod handlers;
 mod router;
+mod sse;
 
 #[tokio::main]
 async fn main() {
