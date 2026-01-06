@@ -1,4 +1,5 @@
 use tracing_subscriber;
+use tracing::info;
 
 mod handlers;
 mod router;
@@ -13,5 +14,7 @@ async fn main() {
 
 	let app_router = router::build_router();
 	let tcp_listener = tokio::net::TcpListener::bind(server_address).await.unwrap();
+
+	info!("Server listening on {}", server_address);
 	axum::serve(tcp_listener, app_router).await.unwrap();
 }
