@@ -30,6 +30,7 @@
 		"@tauri-apps/api": "^2.9",
 		"@tauri-apps/plugin-deep-link": "^2.4",
 		"@tauri-apps/plugin-dialog": "^2.4",
+		"axios": "^1.13.2",
 		"dompurify": "^3.3",
 		"marked": "^17.0",
 		"marked-base-url": "^1.1",
